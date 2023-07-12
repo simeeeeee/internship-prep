@@ -1,0 +1,28 @@
+#flex_box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+ul > li {
+  border: 1em;
+}
+h3 {
+  background-color: black;
+  color: aliceblue;
+  padding: 1.5em;
+}
+li {
+  list-style-type: none;
+}
+.contain {
+  margin: auto;
+  padding: auto;
+  width: 40%;
+}
+#message {
+  text-align: center;
+}
+img {
+  margin: auto;
+  width: 100%;
+}
