@@ -33,4 +33,14 @@ function handleClick() {
     title.style.color = BASE_COLOR;
   }
 }
-title.addEventListener("click", handleClick);
+//title.addEventListener("click", handleClick);
+//title.addEventListener("mouseenter", handleClick);
+
+//컬러가 4개이상 들어가있는 배열을 만들고
+//특정 이벤트를 통해 랜덤으로 컬러가 선택되도록 만들어보세요.
+
+let arrayColor = ["red", "orange", "green", "pink"];
+function colorChange() {
+  title.style.color = arrayColor[Math.floor(Math.random() * arrayColor.length)];
+}
+title.addEventListener("mouseenter", colorChange);
