@@ -25,6 +25,7 @@ window.addEventListener("resize", notifiyResize); //이벤트를 감지한다.
 //resize(이벤트타입)를 감지하여 notifiyResize(함수이름)를 실행
 const BASE_COLOR = "green";
 const OTHER_COLOR = "yellow";
+
 function handleClick() {
   let currentColor = title.style.color;
   if (title.style.color == BASE_COLOR) {
@@ -43,4 +44,16 @@ let arrayColor = ["red", "orange", "green", "pink"];
 function colorChange() {
   title.style.color = arrayColor[Math.floor(Math.random() * arrayColor.length)];
 }
-title.addEventListener("mouseenter", colorChange);
+//title.addEventListener("mouseenter", colorChange);
+
+const colors = ["red", "blue", "green", "yellow", "pink", "purple"];
+
+function createRandomInt() {
+  return Math.floor(Math.random() * colors.length); //0~6
+}
+
+function handleClick2() {
+  let randomInt = createRandomInt();
+  title.style.color = colors[randomInt];
+}
+title.addEventListener("click", handleClick2);
