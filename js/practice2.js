@@ -1,6 +1,6 @@
 function multiplyTable(number) {
   for (let i = 1; i < 10; i++) {
-    console.log(`${number} *${i} = ${number * i}`);
+    console.log(`${number} * ${i} = ${number * i}`);
   }
 }
 let input = Number(prompt("숫자를 입력하시오"));
@@ -21,16 +21,20 @@ if (!isEligible) {
 //5     'buzz'
 //3,5배수면 'fizzbuzz'
 //나머진 그냥출력
-let i = 1;
-while (i <= 30) {
-  if (i % 3 == 0 && i % 5 == 0) {
-    console.log("fizzbuzz");
-  } else if (i % 3 == 0) {
-    console.log("fizz");
-  } else if (i % 5 == 0) {
-    console.log("buzz");
-  } else {
-    console.log(i);
+function fizzbuzz() {
+  let i = 1;
+  while (i <= 30) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 == 0) {
+      console.log("fizz");
+    } else if (i % 5 == 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
+    i++;
   }
-  i++;
 }
+
+fizzbuzz();
