@@ -51,11 +51,17 @@ let obj = {
     [1, 2, 3],
     1212,
   ],
+  sayMyName: function () {
+    //obj안에있는 데이터값 사용 by this
+    console.log(`Hello, my name is ${this.name}`);
+  },
 };
 
 console.log(obj.name);
 console.log(obj.favoriteFoods[1].isHealthy);
 console.log(obj.favoriteFoods[2][2]);
+
+obj.sayMyName();
 
 const person = {
   greet: function () {
@@ -64,3 +70,29 @@ const person = {
 };
 
 console.log(person.greet());
+
+//string formating
+//`` -> 사이에 있는 것을 문자열로! ${parameter}
+function sayHello(name, age) {
+  console.log(`hello ${name}, you are ${age} years old`);
+}
+
+sayHello("David", 23);
+
+let array = ["사과", "딸기", "수박", "참외", "배"];
+
+for (let i in array) {
+  //in -> 인덱스
+  console.log(i);
+  console.log(array[i]);
+}
+for (let i of array) {
+  //of -> 값
+  console.log(i);
+}
+let i = 0;
+for (i; i < 5; i++) {
+  console.log(i); //01234
+}
+console.log("-------");
+console.log(i); //5

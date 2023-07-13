@@ -11,8 +11,8 @@ let obj = {
     }
   },
 };
-
-obj.fuc(2);
+let input = Number(prompt("숫자를 입력하세요"));
+obj.fuc(input);
 
 //2.
 //배열내 최대값 찾기
