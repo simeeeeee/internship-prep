@@ -57,3 +57,37 @@ function handleClick2() {
   title.style.color = colors[randomInt];
 }
 title.addEventListener("click", handleClick2);
+
+//삼항연산자
+let date = new Date();
+seconds = date.getSeconds();
+seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+//논리연산자
+if (5 > 3 && 2 > 3) {
+  console.log("5>3 && 2>3 &&연산");
+}
+
+if (5 > 3 || 2 > 3) {
+  console.log("5>3 || 2>3 ||연산");
+}
+
+let myInfor = {
+  //object
+  name: "javascript",
+  age: 100,
+  favoriteFoods: ["pizza", "banana"],
+  sayMyName: function () {
+    console.log(`My name is ${this.name}`);
+  },
+};
+
+console.log(myInfor.name);
+myInfor.sayMyName();
+myInfor.favoriteFoods.push("apple");
+console.log(myInfor.favoriteFoods);
+
+//DOM구조 -> 브라우저가 보는 모든 정보를 object로 접근
+document.querySelector("#title");
+let dom = document.getElementById("title");
+console.log(dom);
