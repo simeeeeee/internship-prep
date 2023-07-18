@@ -22,23 +22,58 @@ li {
 #message {
   text-align: center;
 }
-img {
-  margin: auto;
-  width: 100%;
-}
 
 body {
   background-color: rgb(255, 255, 255);
 }
 
 #title {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
-/* .js-form {
+.inactive {
   display: none;
-} */
+}
+.strike-through {
+  text-decoration: line-through;
+  font-size: 0.5em;
+}
 
-.show {
-  display: block;
+body {
+  background-image: url(star.jpg);
+  background-size: cover;
+  color: antiquewhite;
+}
+
+#view {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  position: fixed;
+  margin: auto;
+}
+#article {
+  line-height: 10px;
+}
+.js-clock {
+  font-size: 1.2em;
+}
+.js-greetings {
+  font-size: 1em;
+}
+.js-phrase {
+  font-size: 0.5em;
+}
+.js-focus {
+  font-size: 0.5em;
+}
+#city {
+  font-size: 20px;
+}
+#weather {
+  font-size: 50px;
+  position: fixed;
+  top: 40px;
+  right: 40px;
 }

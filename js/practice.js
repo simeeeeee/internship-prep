@@ -11,7 +11,7 @@ let object = {
     }
   },
 };
-let input = Number(prompt("숫자를 입력하세요"));
+//let input = Number(prompt("숫자를 입력하세요"));
 obj.fuc(input);
 
 //수업

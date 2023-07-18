@@ -7,17 +7,41 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
-    <div class="js-clock">
-      <h1>00 : 00</h1>
+    <div id="weather">
+      <span id="weather"></span>
+      <br />
+      <span id="city"></span>
     </div>
-    <form class="js-form">
-      <input type="text" placeholder="이름이 무엇인가요?" />
-    </form>
-    <h4 class="js-greetings"></h4>
+    <br />
+    <section id="view">
+      <div class="js-clock">
+        <h1>00 : 00</h1>
+      </div>
+      <article id="article">
+        <form class="js-form">
+          <input type="text" placeholder="이름이 무엇인가요?" />
+        </form>
+        <h4 class="js-greetings"></h4>
+
+        <h6>TODAY📌</h6>
+        <form class="js-todoForm">
+          <input
+            id="inputTodo"
+            type="text"
+            placeholder="오늘 가장 중요한 일📌"
+          />
+        </form>
+        <h4 class="js-focus"></h4>
+      </article>
+      <h4 class="js-phrase"></h4>
+    </section>
 
     <!-- <h1 id="title">Hello</h1>
     <script src="/js/index2.js"></script> -->
     <script src="/js/clock.js"></script>
     <script src="/js/greet.js"></script>
+    <script src="/js/weather.js"></script>
+    <script src="/js/phrase.js"></script>
+    <script src="/js/focus.js"></script>
   </body>
 </html>

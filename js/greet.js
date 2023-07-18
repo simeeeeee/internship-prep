@@ -1,14 +1,26 @@
 const form = document.querySelector(".js-form");
-const input = form.querySelector("input"); //form안의 input태그
+const input = form.querySelector(".js-form input"); //form안의 input태그
 const greeting = document.querySelector(".js-greetings");
+
+function hello() {
+  let date = new Date();
+  if (date.getHours >= 6 && date.getHours <= 12) {
+    sayHello = "Good morning";
+  } else if (date.getHours > 12 && date.getHours <= 18) {
+    sayHello = "Good afternoon";
+  } else {
+    sayHello = "Good evening";
+  }
+}
+
 function saveName(name) {
   localStorage.setItem("currentUser", name);
 }
 function showGreeting(name) {
   //form에 있는 class를 제거해서 안보이게 하고,
   //greeting 요소를 보이게하세요!
-
-  greeting.innerText = `안녕하세요! ${name}`;
+  hello();
+  greeting.innerText = `${sayHello}! ${name}`;
 }
 
 function handleSubmit(event) {
@@ -17,10 +29,11 @@ function handleSubmit(event) {
   console.log(value);
   showGreeting(value);
   saveName(value);
+  //이름을 쳤을땐 input탭이 안보여야함 ->index.css
+  form.className = "inactive";
 }
 
 function askForName() {
-  //이름을 쳤을땐 input탭이 안보여야함 ->index.css
   form.addEventListener("submit", handleSubmit);
 }
 
@@ -32,6 +45,7 @@ function loadName() {
     askForName();
   } else {
     console.log(`${currentUser} 이미 존재`);
+    form.className = "inactive";
     showGreeting(currentUser);
   }
 }
